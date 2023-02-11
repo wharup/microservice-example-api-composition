@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+         updateCheck="true"
+         monitoring="autodetect"
+         dynamicConfig="true">
+
+    <cache name="customers"
+		   maxBytesLocalHeap="20M"
+           eternal="false"
+           overflowToDisk="false"
+           timeToLiveSeconds = "3600" 
+           memoryStoreEvictionPolicy="LRU"
+           transactionalMode="off">
+    </cache>
+
+    <cache name="users"
+		   maxBytesLocalHeap="5M"
+           eternal="false"
+           overflowToDisk="false"
+           timeToLiveSeconds = "21600" 
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+    </cache>
+
+</ehcache>
