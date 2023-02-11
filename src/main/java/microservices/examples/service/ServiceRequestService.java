@@ -72,7 +72,7 @@ public class ServiceRequestService {
 		ensureUserCanReadAllServiceRequests(user);
 		
 		//2. 전체 상담이력 조회
-	    sw.start("1. 상담이력 쿼리");
+		sw.start("1. 상담이력 쿼리");
 		List<ServiceRequest> result = serviceRequestDAO.selectAll(pageable);
 		sw.stop();
 		
@@ -105,8 +105,8 @@ public class ServiceRequestService {
 			sr.setVocAssgneeDeptName(get(departmentNames, sr.getVocAssgneeDeptId()));
 		}
 		sw.stop();
-        StopWatchUtil.logGroupByTaskName(sw);
-        return result;
+		StopWatchUtil.logGroupByTaskName(sw);
+		return result;
 	}
 	
 	private void ensureUserCanReadAllServiceRequests(UserDetails user) {
